@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Gantt Axis Details Chart | JSCharting</title>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="https://code.jscharting.com/latest/jscharting.js"></script>
+    <script src="./index.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/default.css">
+    <style>
+        /* Additional CSS can be added here */
+        .flex {
+            display: flex;
+        }
+        #table {
+       
+
+            margin-right: 20px;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <h2 class="heading">Project: Light</h2>
+    <h4>Contoso, Ltd.<br/>Riku Nakano</h4>
+    <p>Project start date: 6/11/2024</p>
+    <div class="flex1">
+        <div class="left"> <p>Scrolling increment: 5</p></div>
+       
+        <div class="right"><h2><span class="june">June</span><span class="july">July</span></h2></div>
+    </div>
+    
+    <div class="flex">
+        <div id="table">
+          <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Milestones</title>
+    <script src="https://code.jscharting.com/latest/jscharting.js"></script>
+</head>
+<body>
+    <table id="projectTable">
+        <thead>
+            <tr>
+                <th>Milestone Description</th>
+                <th>Category</th>
+                <th>Assigned to</th>
+                <th >Progress</th>
+                <th>Start</th>
+                <th>End</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="header"><td colspan="6">Project Development</td></tr>
+            <tr>
+                <td>Project charter</td>
+                <td>
+                    <select id="categorySelect1">
+                        <option value="ontrack">ontrack</option>
+                        <option value="low risk">low risk</option>
+                        <option value="high risk">high risk</option>
+                        <option value="med risk">med risk</option>
+                    </select>
+                    <button onclick="updateChart()">OK</button>
+                </td>
+                <td>name</td>
+                <td id="progress-cell">
+                    <input type="text" id="progress-input" placeholder="Enter %" style="width: 50%;">
+                    <button onclick="updateProgress()">ok</button>
+                    <div class="progress-container" width="10px">
+                        <div class="progress-bar" id="progress-bar"></div>
+                        <span class="progress-text" id="progress-text"></span>
+                    </div>
+                </td>
+                <td>
+                    <input type="date" class="start-date" id="startDate1" value="2024-06-13">
+                    <button onclick="updateChart()">OK</button>
+                </td>
+                <td>
+                    <input type="date" class="end-date" id="endDate1" value="2024-06-15">
+                    <button onclick="updateChart()">OK</button>
+                </td>
+            </tr>
+            <tr>
+                <td>Research</td>
+                <td>
+                    <select id="categorySelect2">
+                        <option value="ontrack">ontrack</option>
+                        <option value="low risk">low risk</option>
+                        <option value="high risk">high risk</option>
+                        <option value="med risk">med risk</option>
+                    </select>
+                    <button onclick="updateChart()">OK</button>
+                </td>
+                <td>name</td>
+                <td id="progress-cell">
+                    <input type="text" id="progress-input" placeholder="Enter %" style="width: 50%;">
+                    <button onclick="updateProgress()">ok</button>
+                    <div class="progress-container" width="10px">
+                        <div class="progress-bar" id="progress-bar"></div>
+                        <span class="progress-text" id="progress-text"></span>
+                    </div>
+                </td>
+                <td>
+                    <input type="date" class="start-date" id="startDate2" value="2024-06-13">
+                    <button onclick="updateChart()">OK</button>
+                </td>
+                <td>
+                    <input type="date" class="end-date" id="endDate2" value="2024-06-15">
+                    <button onclick="updateChart()">OK</button>
+                </td>
+            </tr>
+            <tr>
+                <td>Projection</td>
+                <td>
+                    <select id="categorySelect3">
+                        <option value="ontrack">ontrack</option>
+                        <option value="low risk">low risk</option>
+                        <option value="high risk">high risk</option>
+                        <option value="med risk">med risk</option>
+                    </select>
+                    <button onclick="updateChart()">OK</button>
+                </td>
+                <td>name</td>
+                <td id="progress-cell">
+                    <input type="text" id="progress-input" placeholder="Enter %" style="width: 50%;">
+                    <button onclick="updateProgress()">ok</button>
+                    <div class="progress-container" width="10px">
+                        <div class="progress-bar" id="progress-bar"></div>
+                        <span class="progress-text" id="progress-text"></span>
+                    </div>
+                </td>
+                <td>
+                    <input type="date" class="start-date" id="startDate3" value="2024-06-13">
+                    <button onclick="updateChart()">OK</button>
+                </td>
+                <td>
+                    <input type="date" class="end-date" id="endDate3" value="2024-06-15">
+                    <button onclick="updateChart()">OK</button>
+                </td>
+            </tr>
+            <tr>
+                <td>Stakeholders</td>
+                <td>
+                    <select id="categorySelect4">
+                        <option value="ontrack">ontrack</option>
+                        <option value="low risk">low risk</option>
+                        <option value="high risk">high risk</option>
+                        <option value="med risk">med risk</option>
+                    </select>
+                    <button onclick="updateChart()">OK</button>
+                </td>
+                <td>name</td>
+                <td id="progress-cell">
+                    <input type="text" id="progress-input" placeholder="Enter %" style="width: 50%;">
+                    <button onclick="updateProgress()">ok</button>
+                    <div class="progress-container" width="10px">
+                        <div class="progress-bar" id="progress-bar"></div>
+                        <span class="progress-text" id="progress-text"></span>
+                    </div>
+                </td>
+                <td>
+                    <input type="date" class="start-date" id="startDate4" value="2024-06-13">
+                    <button onclick="updateChart()">OK</button>
+                </td>
+                <td>
+                    <input type="date" class="end-date" id="endDate4" value="2024-06-15">
+                    <button onclick="updateChart()">OK</button>
+                </td>
+            </tr>
+            <tr>
+                <td>Review</td>
+                <td>
+                    <select id="categorySelect5">
+                        <option value="ontrack">ontrack</option>
+                        <option value="low risk">low risk</option>
+                        <option value="high risk">high risk</option>
+                        <option value="med risk">med risk</option>
+                    </select>
+                    <button onclick="updateChart()">OK</button>
+                </td>
+                <td>name</td>
+                <td id="progress-cell">
+                    <input type="text" id="progress-input" placeholder="Enter %" style="width: 50%;">
+                    <button onclick="updateProgress()">ok</button>
+                    <div class="progress-container" width="10px">
+                        <div class="progress-bar" id="progress-bar"></div>
+                        <span class="progress-text" id="progress-text"></span>
+                    </div>
+                </td>
+                <td>
+                    <input type="date" class="start-date" id="startDate5" value="2024-06-13">
+                    <button onclick="updateChart()">OK</button>
+                </td>
+                <td>
+                    <input type="date" class="end-date" id="endDate5" value="2024-06-15">
+                    <button onclick="updateChart()">OK</button>
+                </td>
+            </tr>
+            <tr class="header"><td colspan="6">Contracts</td></tr>
+            <tr>
+                <td>Proposals</td>
+                <td>
+                    <select id="categorySelect6">
+                        <option value="ontrack">ontrack</option>
+                        <option value="low risk">low risk</option>
+                        <option value="high risk">high risk</option>
+                        <option value="med risk">med risk</option>
+                    </select>
+                    <button onclick="updateChart()">OK</button>
+                </td>
+                <td>name</td>
+                <td id="progress-cell">
+                    <input type="text" id="progress-input" placeholder="Enter %" style="width: 50%;">
+                    <button onclick="updateProgress()">ok</button>
+                    <div class="progress-container" width="10px">
+                        <div class="progress-bar" id="progress-bar"></div>
+                        <span class="progress-text" id="progress-text"></span>
+                    </div>
+                </td>
+                <td>
+                    <input type="date" class="start-date" id="startDate6" value="2024-06-13">
+                    <button onclick="updateChart()">OK</button>
+                </td>
+                <td>
+                    <input type="date" class="end-date" id="endDate6" value="2024-06-15">
+                    <button onclick="updateChart()">OK</button>
+                </td>
+            </tr>
+            <tr>
+                <td>Document Review</td>
+                <td>
+                    <select id="categorySelect7">
+                        <option value="ontrack">ontrack</option>
+                        <option value="low risk">low risk</option>
+                        <option value="high risk">high risk</option>
+                        <option value="med risk">med risk</option>
+                    </select>
+                    <button onclick="updateChart()">OK</button>
+                </td>
+                <td>name</td>
+                <td id="progress-cell">
+                    <input type="text" id="progress-input" placeholder="Enter %" style="width: 50%;">
+                    <button onclick="updateProgress()">ok</button>
+                    <div class="progress-container" width="10px">
+                        <div class="progress-bar" id="progress-bar"></div>
+                        <span class="progress-text" id="progress-text"></span>
+                    </div>
+                </td>
+                <td>
+                    <input type="date" class="start-date" id="startDate7" value="2024-06-13">
+                    <button onclick="updateChart()">OK</button>
+                </td>
+                <td>
+                    <input type="date" class="end-date" id="endDate7" value="2024-06-15">
+                    <button onclick="updateChart()">OK</button>
+                </td>
+            </tr>
+            <tr>
+                <td>Bid Date</td>
+                <td>
+                    <select id="categorySelect8">
+                        <option value="ontrack">ontrack</option>
+                        <option value="low risk">low risk</option>
+                        <option value="high risk">high risk</option>
+                        <option value="med risk">med risk</option>
+                    </select>
+                    <button onclick="updateChart()">OK</button>
+                </td>
+                <td>name</td>
+                <td id="progress-cell">
+                    <input type="text" id="progress-input" placeholder="Enter %" style="width: 50%;">
+                    <button onclick="updateProgress()">ok</button>
+                    <div class="progress-container" width="10px">
+                        <div class="progress-bar" id="progress-bar"></div>
+                        <span class="progress-text" id="progress-text"></span>
+                    </div>
+                </td>
+                <td>
+                    <input type="date" class="start-date" id="startDate8" value="2024-06-13">
+                    <button onclick="updateChart()">OK</button>
+                </td>
+                <td>
+                    <input type="date" class="end-date" id="endDate8" value="2024-06-15">
+                    <button onclick="updateChart()">OK</button>
+                </td>
+            </tr>
+            <tr>
+                <td>Award Date</td>
+                <td>
+                    <select id="categorySelect9">
+                        <option value="ontrack">ontrack</option>
+                        <option value="low risk">low risk</option>
+                        <option value="high risk">high risk</option>
+                        <option value="med risk">med risk</option>
+                    </select>
+                    <button onclick="updateChart()">OK</button>
+                </td>
+                <td>name</td>
+                <td id="progress-cell">
+                    <input type="text" id="progress-input" placeholder="Enter %" style="width: 50%;">
+                    <button onclick="updateProgress()">ok</button>
+                    <div class="progress-container" width="10px">
+                        <div class="progress-bar" id="progress-bar"></div>
+                        <span class="progress-text" id="progress-text"></span>
+                    </div>
+                </td>
+                <td>
+                    <input type="date" class="start-date" id="startDate9" value="2024-06-13">
+                    <button onclick="updateChart()">OK</button>
+                </td>
+                <td>
+                    <input type="date" class="end-date" id="endDate9" value="2024-06-15">
+                    <button onclick="updateChart()">OK</button>
+                </td>
+            </tr>
+            <tr>
+                <td>Finalize</td>
+                <td>
+                    <select id="categorySelect10">
+                        <option value="ontrack">ontrack</option>
+                        <option value="low risk">low risk</option>
+                        <option value="high risk">high risk</option>
+                        <option value="med risk">med risk</option>
+                    </select>
+                    <button onclick="updateChart()">OK</button>
+                </td>
+                <td>name</td>
+                <td id="progress-cell">
+                    <input type="text" id="progress-input" placeholder="Enter %" style="width: 50%;">
+                    <button onclick="updateProgress()">ok</button>
+                    <div class="progress-container" width="10px">
+                        <div class="progress-bar" id="progress-bar"></div>
+                        <span class="progress-text" id="progress-text"></span>
+                    </div>
+                </td>
+                <td>
+                    <input type="date" class="start-date" id="startDate10" value="2024-06-13">
+                    <button onclick="updateChart()">OK</button>
+                </td>
+                <td>
+                    <input type="date" class="end-date" id="endDate10" value="2024-06-15">
+                    <button onclick="updateChart()">OK</button>
+                </td>
+            </tr>
+            <tr class="header"><td colspan="6">Design</td></tr>
+            <tr>
+                <td>Feasibility study</td>
+                <td>
+                    <select id="categorySelect11">
+                        <option value="ontrack">ontrack</option>
+                        <option value="low risk">low risk</option>
+                        <option value="high risk">high risk</option>
+                        <option value="med risk">med risk</option>
+                    </select>
+                    <button onclick="updateChart()">OK</button>
+                </td>
+                <td>name</td>
+                <td id="progress-cell">
+                    <input type="text" id="progress-input" placeholder="Enter %" style="width: 50%;">
+                    <button onclick="updateProgress()">ok</button>
+                    <div class="progress-container" width="10px">
+                        <div class="progress-bar" id="progress-bar"></div>
+                        <span class="progress-text" id="progress-text"></span>
+                    </div>
+                </td>
+                <td>
+                    <input type="date" class="start-date" id="startDate11" value="2024-06-13">
+                    <button onclick="updateChart()">OK</button>
+                </td>
+                <td>
+                    <input type="date" class="end-date" id="endDate11" value="2024-06-15">
+                    <button onclick="updateChart()">OK</button>
+                </td>
+            </tr>
+            <tr>
+                <td>Submit permit applications</td>
+                <td>
+                    <select id="categorySelect12">
+                        <option value="ontrack">ontrack</option>
+                        <option value="low risk">low risk</option>
+                        <option value="high risk">high risk</option>
+                        <option value="med risk">med risk</option>
+                    </select>
+                    <button onclick="updateChart()">OK</button>
+                </td>
+                <td>name</td>
+                <td id="progress-cell">
+                    <input type="text" id="progress-input" placeholder="Enter %" style="width: 50%;">
+                    <button onclick="updateProgress()">ok</button>
+                    <div class="progress-container" width="10px">
+                        <div class="progress-bar" id="progress-bar"></div>
+                        <span class="progress-text" id="progress-text"></span>
+                    </div>
+                </td>
+                <td>
+                    <input type="date" class="start-date" id="startDate12" value="2024-06-13">
+                    <button onclick="updateChart()">OK</button>
+                </td>
+                <td>
+                    <input type="date" class="end-date" id="endDate12" value="2024-06-15">
+                    <button onclick="updateChart()">OK</button>
+                </td>
+            </tr>
+            <tr>
+                <td>Design proposal</td>
+                <td>
+                    <select id="categorySelect13">
+                        <option value="ontrack">ontrack</option>
+                        <option value="low risk">low risk</option>
+                        <option value="high risk">high risk</option>
+                        <option value="med risk">med risk</option>
+                    </select>
+                    <button onclick="updateChart()">OK</button>
+                </td>
+                <td>name</td>
+                <td id="progress-cell">
+                    <input type="text" id="progress-input" placeholder="Enter %" style="width: 50%;">
+                    <button onclick="updateProgress()">ok</button>
+                    <div class="progress-container" width="10px">
+                        <div class="progress-bar" id="progress-bar"></div>
+                        <span class="progress-text" id="progress-text"></span>
+                    </div>
+                </td>
+                <td>
+                    <input type="date" class="start-date" id="startDate13" value="2024-06-13">
+                    <button onclick="updateChart()">OK</button>
+                </td>
+                <td>
+                    <input type="date" class="end-date" id="endDate13" value="2024-06-15">
+                    <button onclick="updateChart()">OK</button>
+                </td>
+            </tr>
+            <tr>
+                <td>Materials</td>
+                <td>
+                    <select id="categorySelect14">
+                        <option value="ontrack">ontrack</option>
+                        <option value="low risk">low risk</option>
+                        <option value="high risk">high risk</option>
+                        <option value="med risk">med risk</option>
+                    </select>
+                    <button onclick="updateChart()">OK</button>
+                </td>
+                <td>name</td>
+                <td id="progress-cell">
+                    <input type="text" id="progress-input" placeholder="Enter %" style="width: 50%;">
+                    <button onclick="updateProgress()">ok</button>
+                    <div class="progress-container" width="10px">
+                        <div class="progress-bar" id="progress-bar"></div>
+                        <span class="progress-text" id="progress-text"></span>
+                    </div>
+                </td>
+                <td>
+                    <input type="date" class="start-date" id="startDate14" value="2024-06-13">
+                    <button onclick="updateChart()">OK</button>
+                </td>
+                <td>
+                    <input type="date" class="end-date" id="endDate14" value="2024-06-15">
+                    <button onclick="updateChart()">OK</button>
+                </td>
+            </tr>
+            <tr>
+                <td>Equipment</td>
+                <td>
+                    <select id="categorySelect15">
+                        <option value="ontrack">ontrack</option>
+                        <option value="low risk">low risk</option>
+                        <option value="high risk">high risk</option>
+                        <option value="med risk">med risk</option>
+                    </select>
+                    <button onclick="updateChart()">OK</button>
+                </td>
+                <td>name</td>
+                <td id="progress-cell">
+                    <input type="text" id="progress-input" placeholder="Enter %" style="width: 50%;">
+                    <button onclick="updateProgress()">ok</button>
+                    <div class="progress-container" width="10px">
+                        <div class="progress-bar" id="progress-bar"></div>
+                        <span class="progress-text" id="progress-text"></span>
+                    </div>
+                </td>
+                <td>
+                    <input type="date" class="start-date" id="startDate15" value="2024-06-13">
+                    <button onclick="updateChart()">OK</button>
+                </td>
+                <td>
+                    <input type="date" class="end-date" id="endDate15" value="2024-06-15">
+                    <button onclick="updateChart()">OK</button>
+                </td>
+            </tr>
+            <tr class="header"><td colspan="6">Testing</td></tr>
+            <tr>
+                <td>Environment</td>
+                <td>
+                    <select id="categorySelect16">
+                        <option value="ontrack">ontrack</option>
+                        <option value="low risk">low risk</option>
+                        <option value="high risk">high risk</option>
+                        <option value="med risk">med risk</option>
+                    </select>
+                    <button onclick="updateChart()">OK</button>
+                </td>
+                <td>name</td>
+                <td id="progress-cell">
+                    <input type="text" id="progress-input" placeholder="Enter %" style="width: 50%;">
+                    <button onclick="updateProgress()">ok</button>
+                    <div class="progress-container" width="10px">
+                        <div class="progress-bar" id="progress-bar"></div>
+                        <span class="progress-text" id="progress-text"></span>
+                    </div>
+                </td>
+                <td>
+                    <input type="date" class="start-date" id="startDate16" value="2024-06-13">
+                    <button onclick="updateChart()">OK</button>
+                </td>
+                <td>
+                    <input type="date" class="end-date" id="endDate16" value="2024-06-15">
+                    <button onclick="updateChart()">OK</button>
+                </td>
+            </tr>
+            <tr>
+                <td>System test</td>
+                <td>
+                    <select id="categorySelect17">
+                        <option value="ontrack">ontrack</option>
+                        <option value="low risk">low risk</option>
+                        <option value="high risk">high risk</option>
+                        <option value="med risk">med risk</option>
+                    </select>
+                    <button onclick="updateChart()">OK</button>
+                </td>
+                <td>name</td>
+                <td id="progress-cell">
+                    <input type="text" id="progress-input" placeholder="Enter %" style="width: 50%;">
+                    <button onclick="updateProgress()">ok</button>
+                    <div class="progress-container" width="10px">
+                        <div class="progress-bar" id="progress-bar"></div>
+                        <span class="progress-text" id="progress-text"></span>
+                    </div>
+                </td>
+                <td>
+                    <input type="date" class="start-date" id="startDate17" value="2024-06-13">
+                    <button onclick="updateChart()">OK</button>
+                </td>
+                <td>
+                    <input type="date" class="end-date" id="endDate17" value="2024-06-15">
+                    <button onclick="updateChart()">OK</button>
+                </td>
+            </tr>
+            <tr>
+                <td>Issue & Bugs</td>
+                <td>
+                    <select id="categorySelect18">
+                        <option value="ontrack">ontrack</option>
+                        <option value="low risk">low risk</option>
+                        <option value="high risk">high risk</option>
+                        <option value="med risk">med risk</option>
+                    </select>
+                    <button onclick="updateChart()">OK</button>
+                </td>
+                <td>name</td>
+                <td id="progress-cell">
+                    <input type="text" id="progress-input" placeholder="Enter %" style="width: 50%;">
+                    <button onclick="updateProgress()">ok</button>
+                    <div class="progress-container" width="10px">
+                        <div class="progress-bar" id="progress-bar"></div>
+                        <span class="progress-text" id="progress-text"></span>
+                    </div>
+                </td>
+                <td>
+                    <input type="date" class="start-date" id="startDate18" value="2024-06-13">
+                    <button onclick="updateChart()">OK</button>
+                </td>
+                <td>
+                    <input type="date" class="end-date" id="endDate18" value="2024-06-15">
+                    <button onclick="updateChart()">OK</button>
+                </td>
+            </tr>
+            
+            
+        </tbody>
+    </table>
+  
+    <div id="chartDiv">
+        
+    </div>
+   
+ 
+        
+   
+
+    
+   
+    <script type="text/javascript">
+        function getRowHeights() {
+            var rows = document.querySelectorAll('#projectTable tbody tr');
+            return Array.from(rows).map(row => row.offsetHeight);
+        }
+
+        function getTableData() {
+            var tableRows = document.querySelectorAll('#projectTable tbody tr');
+            var data = [];
+            tableRows.forEach(row => {
+                var startDateInput = row.querySelector('.start-date');
+                var endDateInput = row.querySelector('.end-date');
+                if (startDateInput && endDateInput) {
+                    var startDate = new Date(startDateInput.value);
+                    var endDate = new Date(endDateInput.value);
+                    data.push({ startDate, endDate });
+                }
+            });
+            return data;
+        }
+
+        function getCategoryColor(category) {
+            var colorMap = {
+                'ontrack': 'green',
+                'low risk': 'lightblue',
+                'high risk': 'purple',
+                'med risk': 'blue',
+                'unassigned': 'grey'
+            };
+            return colorMap[category] || 'gray'; // Default to gray if category not found
+        }
+
+        function updateChart() {
+            var rowHeights = getRowHeights();
+            var tableHeight = document.querySelector('#projectTable').offsetHeight;
+
+            // Set the height of the chartDiv
+            document.getElementById('chartDiv').style.height = tableHeight + 'px';
+
+            // Calculate yAxis ticks size based on row heights
+            var yAxisTicksSizes = rowHeights.map(height => ({ size: height }));
+
+            // Get the data from the table
+            var tableData = getTableData();
+
+            // Retrieve selected category values from dropdowns
+            var category1 = document.getElementById('categorySelect1').value;
+            var category2 = document.getElementById('categorySelect2').value;
+            var category3 = document.getElementById('categorySelect3').value;
+            var category4 = document.getElementById('categorySelect4').value;
+            var category5 = document.getElementById('categorySelect5').value;
+            var category6 = document.getElementById('categorySelect6').value;
+            var category7 = document.getElementById('categorySelect7').value;
+            var category8 = document.getElementById('categorySelect8').value;
+            var category9 = document.getElementById('categorySelect9').value;
+            var category10 = document.getElementById('categorySelect10').value;
+            var category11 = document.getElementById('categorySelect11').value;
+            var category12 = document.getElementById('categorySelect12').value;
+            var category13 = document.getElementById('categorySelect13').value;
+            var category14 = document.getElementById('categorySelect14').value;
+            var category15 = document.getElementById('categorySelect15').value;
+            var category16 = document.getElementById('categorySelect16').value;
+            var category17 = document.getElementById('categorySelect17').value;
+            var category18 = document.getElementById('categorySelect18').value;
+
+
+            // Retrieve start and end dates from inputs
+            var startDate1 = new Date(document.getElementById('startDate1').value);
+            var endDate1 = new Date(document.getElementById('endDate1').value);
+            var startDate2 = new Date(document.getElementById('startDate2').value);
+            var endDate2 = new Date(document.getElementById('endDate2').value);
+            var startDate3 = new Date(document.getElementById('startDate3').value);
+            var endDate3 = new Date(document.getElementById('endDate3').value);
+            var startDate4 = new Date(document.getElementById('startDate4').value);
+            var endDate4 = new Date(document.getElementById('endDate4').value);
+            var startDate5 = new Date(document.getElementById('startDate5').value);
+            var endDate5 = new Date(document.getElementById('endDate5').value);
+            var startDate6 = new Date(document.getElementById('startDate6').value);
+            var endDate6 = new Date(document.getElementById('endDate6').value);
+            var startDate7 = new Date(document.getElementById('startDate7').value);
+            var endDate7 = new Date(document.getElementById('endDate7').value);
+            var startDate8 = new Date(document.getElementById('startDate8').value);
+            var endDate8 = new Date(document.getElementById('endDate8').value);
+            var startDate9 = new Date(document.getElementById('startDate9').value);
+            var endDate9 = new Date(document.getElementById('endDate9').value);
+            var startDate10 = new Date(document.getElementById('startDate10').value);
+            var endDate10 = new Date(document.getElementById('endDate10').value);
+            var startDate11 = new Date(document.getElementById('startDate11').value);
+            var endDate11 = new Date(document.getElementById('endDate11').value);
+            var startDate12 = new Date(document.getElementById('startDate12').value);
+            var endDate12 = new Date(document.getElementById('endDate12').value);
+            var startDate13 = new Date(document.getElementById('startDate13').value);
+            var endDate13 = new Date(document.getElementById('endDate13').value);
+            var startDate14 = new Date(document.getElementById('startDate14').value);
+            var endDate14 = new Date(document.getElementById('endDate14').value);
+            var startDate15 = new Date(document.getElementById('startDate15').value);
+            var endDate15 = new Date(document.getElementById('endDate15').value);
+            var startDate16 = new Date(document.getElementById('startDate16').value);
+            var endDate16 = new Date(document.getElementById('endDate16').value);
+            var startDate17 = new Date(document.getElementById('startDate17').value);
+            var endDate17 = new Date(document.getElementById('endDate17').value);
+            var startDate18 = new Date(document.getElementById('startDate18').value);
+            var endDate18 = new Date(document.getElementById('endDate18').value);
+
+
+
+
+
+            // Chart configuration
+            var columnWidths = [100, 100, 90]; // Increase column widths as desired
+            var cellHeight = 20; // Increase cell height as desired
+
+            var span = function(val, width, height, borderColor) {
+                return '<span style="width:' + width + 'px; height:' + height + 'px; display: inline-block; border: 1px solid ' + borderColor + ';">' + val + '</span>';
+            };
+            var mapLabels = function(labels, widths, height, borderColor) {
+                return labels.map(function(v, i) {
+                    return span(v, widths[i], height, borderColor);
+                }).join('');
+            };
+
+            var headerText = mapLabels(['Task', 'Start', 'End'], columnWidths, cellHeight, 'black');
+            var tickTemplate = mapLabels(['%name', '%low', '%high'], columnWidths, cellHeight, 'black');
+            var boldTickTemplate = '<b>' + tickTemplate + '</b>';
+
+            JSC.chart('chartDiv', {
+                type: 'horizontal column solid',
+                zAxis_scale_type: 'stacked',
+                defaultBox_boxVisible: false,
+                defaultAnnotation: { label_style_fontSize: '15px' },
+                annotations: [
+                    { position: '0,2', label_text: headerText },
+                ],
+                legend: {
+                    position: 'outside top',
+                    margin_bottom: 8,
+                    fill: 'white',
+                    outline: { color: 'black', width: 1 }, // Add black border
+                    corners: 'round',
+                    template: '%icon %name'
+                },
+                xAxis: {
+                    position: 'top', // Move xAxis to the top
+                    defaultTick: {
+                        label_style: { fontSize: 12 },
+                        label_text: '%value<br>%format{%A}', // Add day of the week
+                        label_align: 'left' // Align labels to the left
+                    },
+                    grid: false ,
+                  
+                    markers: [
+                { position: 'top', value: [new Date('2024-06-12'), new Date('2024-07-01')], color: 'lightblue', label_text: '<span style="padding: 2px; font-size: 16px; color: Black;">Lowrisk</span>' },
+                { position: 'top', value: [new Date('2024-06-12'), new Date('2024-07-01')], color: 'blue', label_text: '<span style="padding: 2px; font-size: 16px; color: Black;">Midrisk</span>' },
+                { position: 'top', value: [new Date('2024-06-12'), new Date('2024-07-01')], color: 'purple', label_text: '<span style="padding: 2px; font-size: 16px; color: Black;">High Risk</span>' },
+                { position: 'top', value: [new Date('2024-06-12'), new Date('2024-07-01')], color: 'grey', label_text: '<span style="padding: 2px; font-size: 16px; color: Black;">unassigned</span>' }
+            ]
+                    
+                    // Remove grid lines
+                },
+                palette: 'fiveColor46',
+                yAxis: {
+                    id: 'yAx',
+                    alternateGridFill: 'none',
+                    scale: {
+                        type: 'time',
+                        range: [new Date('2024-06-01'), new Date('2024-07-30')],
+                        interval: { unit: 'day' },
+                        spacing: 2 // Ensure every date from June to July is visible
+                    },
+                    scale_range_padding: 0.15,
+                    grid: false, // Remove grid lines
+                    label: {
+                        renderer: function(value, context) {
+                            const label = document.createElement('div');
+                            label.style.backgroundColor = 'gray';
+                            label.style.color = 'white'; // Ensure text is visible on grey background
+                            label.style.padding = '5px'; // Adjust padding for better visibility
+                            label.style.borderRadius = '3px'; // Optional: for better appearance
+                            label.style.display = 'inline-block'; // Ensure the label is rendered as a block element
+                            label.textContent = value;
+                            return label.outerHTML; // Ensure the div is returned as HTML
+                        }
+                    }
+                },
+                defaultTooltip_combined: false,
+                defaultPoint: {
+                    xAxisTick_label_text: tickTemplate,
+                    tooltip: '<b>%name</b> %low - %high<br/>{days(%high-%low)} days'
+                },
+                defaultSeries: {
+                    firstPoint: {
+                        outline: { color: 'darkenMore', width: 2 },
+                        hatch_style: 'light-downward-diagonal',
+                        xAxisTick_label_text: boldTickTemplate
+                    }
+                },
+                yAxis_scale_type: 'time',
+                series: [
+                    {
+                        name: 'on track',
+                        points: [
+                            {
+                                name: 'Project Development',
+        isHeader: true, // Indicates that this entry is a header
+        y: ["", ""], // Empty strings for start and end dates
+        yAxis: null,
+        color: null
+                            },
+                            {
+                                name: 'Project charter',
+                                y: [startDate1, endDate1],
+                                yAxis: yAxisTicksSizes[0],
+                                color: getCategoryColor(category1)
+                            },
+                            {
+                                name: 'Research',
+                                y: [startDate2, endDate2],
+                                yAxis: yAxisTicksSizes[1],
+                                color: getCategoryColor(category2)
+                            },
+                            {
+                                name: 'Projection',
+                                y: [startDate3, endDate3],
+                                yAxis: yAxisTicksSizes[1],
+                                color: getCategoryColor(category3)
+                            },
+                            {
+                                name: 'Stakeholders',
+                                y: [startDate4, endDate4],
+                                yAxis: yAxisTicksSizes[1],
+                                color: getCategoryColor(category4)
+                            },
+                            {
+                                name: 'Review',
+                                y: [startDate5, endDate5],
+                                yAxis: yAxisTicksSizes[1],
+                                color: getCategoryColor(category5)
+                            },
+                            {
+                                name: 'Contracts',
+        isHeader: true, // Indicates that this entry is a header
+        y: ["", ""], // Empty strings for start and end dates
+        yAxis: null,
+        color: null
+                            },
+                            {
+                                name: 'Proposals',
+                                y: [startDate6, endDate6],
+                                yAxis: yAxisTicksSizes[1],
+                                color: getCategoryColor(category6)
+                            },
+                            {
+                                name: 'Document Review',
+                                y: [startDate7, endDate7],
+                                yAxis: yAxisTicksSizes[1],
+                                color: getCategoryColor(category7)
+                            },
+                            {
+                                name: 'Bid Date',
+                                y: [startDate8, endDate8],
+                                yAxis: yAxisTicksSizes[1],
+                                color: getCategoryColor(category8)
+                            },
+                            {
+                                name: 'Award Date',
+                                y: [startDate9, endDate9],
+                                yAxis: yAxisTicksSizes[1],
+                                color: getCategoryColor(category9)
+                            },
+                            {
+                                name: 'Finalize',
+                                y: [startDate10, endDate10],
+                                yAxis: yAxisTicksSizes[1],
+                                color: getCategoryColor(category10)
+                            },
+                            {
+                                name: 'Design',
+        isHeader: true, // Indicates that this entry is a header
+        y: ["", ""], // Empty strings for start and end dates
+        yAxis: null,
+        color: null
+                            },
+                            {
+                                name: 'Feasibility study',
+                                y: [startDate11, endDate11],
+                                yAxis: yAxisTicksSizes[1],
+                                color: getCategoryColor(category11)
+                            },
+                            {
+                                name: 'Submit permit applications',
+                                y: [startDate12, endDate12],
+                                yAxis: yAxisTicksSizes[1],
+                                color: getCategoryColor(category12)
+                            },
+                            {
+                                name: 'Design proposal',
+                                y: [startDate13, endDate13],
+                                yAxis: yAxisTicksSizes[1],
+                                color: getCategoryColor(category13)
+                            },
+                            {
+                                name: 'Materials',
+                                y: [startDate14, endDate14],
+                                yAxis: yAxisTicksSizes[1],
+                                color: getCategoryColor(category14)
+                            },
+                            {
+                                name: 'Equipment',
+                                y: [startDate15, endDate15],
+                                yAxis: yAxisTicksSizes[1],
+                                color: getCategoryColor(category15)
+                            },
+                            {
+                                name: 'Testing',
+        isHeader: true, // Indicates that this entry is a header
+        y: ["", ""], // Empty strings for start and end dates
+        yAxis: null,
+        color: null
+                            },
+                            {
+                                name: 'Environment',
+                                y: [startDate16, endDate16],
+                                yAxis: yAxisTicksSizes[1],
+                                color: getCategoryColor(category16)
+                            },
+                            {
+                                name: 'System test',
+                                y: [startDate17, endDate17],
+                                yAxis: yAxisTicksSizes[1],
+                                color: getCategoryColor(category17)
+                            },
+                            {
+                                name: 'Issues/bugs',
+                                y: [startDate18, endDate18],
+                                yAxis: yAxisTicksSizes[1],
+                                color: getCategoryColor(category18)
+                            }
+                        ]
+                    }
+                ]
+            });
+        }
+
+        window.addEventListener('load', updateChart);
+        window.addEventListener('resize', updateChart);
+    </script>
+     
+
+</body>
+</html>

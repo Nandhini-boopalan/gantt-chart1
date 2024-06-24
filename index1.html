@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <tr>
+        <th>contract</th>
+        </tr>
+        <tr>
+        <td>Project charter</td>
+        <td> <select>
+            <option value="john_doe">goal</option>
+            <option value="mike_jones">milestone</option>
+            <option value="jane_smith">ontrack</option>
+            <option value="mike_jones">low risk</option>
+            <option value="mike_jones">high risk</option>
+            <option value="mike_jones">med risk</option>
+        </select></td>
+        <td>name</td>
+        <td>25%</td>
+        
+        </tr>
+        <tr>
+            <td>Research</td>
+            <td> <select>
+                <option value="john_doe">goal</option>
+                <option value="mike_jones">milestone</option>
+                <option value="jane_smith">ontrack</option>
+                <option value="mike_jones">low risk</option>
+                <option value="mike_jones">high risk</option>
+                <option value="mike_jones">med risk</option>
+            </select></td>
+            <td>name</td>
+            <td id="progress-cell">
+                <input type="text"  id="progress-input" placeholder="Enter %" style="width: 50%;">
+                <div class="progress-bar" id="progress-bar"></div>
+            </td>
+            
+            </tr>
+            <tr>
+                <td>Projection</td>
+                <td> <select>
+                    <option value="john_doe">goal</option>
+                    <option value="mike_jones">milestone</option>
+                    <option value="jane_smith">ontrack</option>
+                    <option value="mike_jones">low risk</option>
+                    <option value="mike_jones">high risk</option>
+                    <option value="mike_jones">med risk</option>
+                </select></td>
+                <td>name</td>
+                <td >
+                    <select id="percentage" name="percentage" onchange="updateGrid()">
+                        <option value="25%">25%</option>
+                        <option value="50%">50%</option>
+                        <option value="75%">75%</option>
+                        <option value="100%">100%</option>
+                    </select>
+                    <div class="grid" id="grid">
+                        <div width="5px">25%</div>
+                        <div width="5px">50%</div>
+                        <div width="5px">75%</div>
+                        <div width="5px">100%</div>
+                    </div>
+                </td>
+                
+                </tr>
+                <tr>
+                    <td>Stakeholders</td>
+                    <td> <select>
+                        <option value="john_doe">goal</option>
+                        <option value="mike_jones">milestone</option>
+                        <option value="jane_smith">ontrack</option>
+                        <option value="mike_jones">low risk</option>
+                        <option value="mike_jones">high risk</option>
+                        <option value="mike_jones">med risk</option>
+                    </select></td>
+                    <td>name</td>
+                    <td id="progress-cell">
+                        <input type="text"  id="progress-input" placeholder="Enter %" style="width: 50%;">
+                        <div class="progress-bar" id="progress-bar"></div>
+                    </td>
+                    
+                    </tr>
+                    <tr>
+                        <td>Review</td>
+                        <td> <select>
+                            <option value="john_doe">goal</option>
+                            <option value="mike_jones">milestone</option>
+                            <option value="jane_smith">ontrack</option>
+                            <option value="mike_jones">low risk</option>
+                            <option value="mike_jones">high risk</option>
+                            <option value="mike_jones">med risk</option>
+                        </select></td>
+                        <td>name</td>
+                        <td id="progress-cell">
+                            <input type="text"  id="progress-input" placeholder="Enter %" style="width: 50%;">
+                            <div class="progress-bar" id="progress-bar"></div>
+                        </td>
+                        
+                        </tr>
+        
+      <tr>
+        <th>design</th>
+        </tr>
+        <tr>
+        <td>Project charter</td>
+        <td> <select>
+            <option value="john_doe">goal</option>
+            <option value="mike_jones">milestone</option>
+            <option value="jane_smith">ontrack</option>
+            <option value="mike_jones">low risk</option>
+            <option value="mike_jones">high risk</option>
+            <option value="mike_jones">med risk</option>
+        </select></td>
+        <td>name</td>
+        <td>25%</td>
+        
+        </tr>
+        <tr>
+            <td>Research</td>
+            <td> <select>
+                <option value="john_doe">goal</option>
+                <option value="mike_jones">milestone</option>
+                <option value="jane_smith">ontrack</option>
+                <option value="mike_jones">low risk</option>
+                <option value="mike_jones">high risk</option>
+                <option value="mike_jones">med risk</option>
+            </select></td>
+            <td>name</td>
+            <td id="progress-cell">
+                <input type="text"  id="progress-input" placeholder="Enter %" style="width: 50%;">
+                <div class="progress-bar" id="progress-bar"></div>
+            </td>
+            
+            </tr>
+            <tr>
+                <td>Projection</td>
+                <td> <select>
+                    <option value="john_doe">goal</option>
+                    <option value="mike_jones">milestone</option>
+                    <option value="jane_smith">ontrack</option>
+                    <option value="mike_jones">low risk</option>
+                    <option value="mike_jones">high risk</option>
+                    <option value="mike_jones">med risk</option>
+                </select></td>
+                <td>name</td>
+                <td >
+                    <select id="percentage" name="percentage" onchange="updateGrid()">
+                        <option value="25%">25%</option>
+                        <option value="50%">50%</option>
+                        <option value="75%">75%</option>
+                        <option value="100%">100%</option>
+                    </select>
+                    <div class="grid" id="grid">
+                        <div width="5px">25%</div>
+                        <div width="5px">50%</div>
+                        <div width="5px">75%</div>
+                        <div width="5px">100%</div>
+                    </div>
+                </td>
+                
+                </tr>
+                <tr>
+                    <td>Stakeholders</td>
+                    <td> <select>
+                        <option value="john_doe">goal</option>
+                        <option value="mike_jones">milestone</option>
+                        <option value="jane_smith">ontrack</option>
+                        <option value="mike_jones">low risk</option>
+                        <option value="mike_jones">high risk</option>
+                        <option value="mike_jones">med risk</option>
+                    </select></td>
+                    <td>name</td>
+                    <td id="progress-cell">
+                        <input type="text"  id="progress-input" placeholder="Enter %" style="width: 50%;">
+                        <div class="progress-bar" id="progress-bar"></div>
+                    </td>
+                    
+                    </tr>
+                    <tr>
+                        <td>Review</td>
+                        <td> <select>
+                            <option value="john_doe">goal</option>
+                            <option value="mike_jones">milestone</option>
+                            <option value="jane_smith">ontrack</option>
+                            <option value="mike_jones">low risk</option>
+                            <option value="mike_jones">high risk</option>
+                            <option value="mike_jones">med risk</option>
+                        </select></td>
+                        <td>name</td>
+                        <td id="progress-cell">
+                            <input type="text"  id="progress-input" placeholder="Enter %" style="width: 50%;">
+                            <div class="progress-bar" id="progress-bar"></div>
+                        </td>
+                        
+                        </tr>
+        
+</body>
+</html>

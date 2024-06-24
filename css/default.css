@@ -1,0 +1,154 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 10px;
+    font-size: small;
+}
+
+h2, h4, p {
+    margin: 0 0 10px 0;
+}
+
+.flex {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+.header{
+    color: darkblue;
+    font-weight: bold;
+}
+
+#table {
+    flex: 1; /* Take up all available space */
+    display: flex; /* Nested flex container */
+    flex-direction: row; /* Ensure children are aligned horizontally */
+    align-items: flex-start; /* Align items to the start of the cross axis */
+}
+
+#projectTable {
+    width: 400px; /* Fixed width for the table */
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#chartDiv {
+    flex: 1; /* Take up remaining space */
+    margin-left: 10px;
+    max-width: 1050px; /* Adjust this value as needed */
+    height: 900px;
+    margin-top: 0px;
+    padding-top: 40px;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    overflow-y: hidden; /* Disable vertical scrolling */
+   
+   
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+   
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: gray;
+    color: white;
+    font-size: smaller;
+    text-align: center; /* Center-align the text */
+    padding: 10px; /* Add padding for spacing */
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9; /* Light background color */
+}
+
+/* Style for odd rows */
+tr:nth-child(odd) {
+    background-color: #e0e0e0; /* Light grey background color */
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+#progress-cell {
+    position: relative;
+    width: 100%;
+}
+
+.progress-container {
+    position: relative;
+    width: 100%;
+    height: 30px; /* Adjust height as needed */
+    background-color: white;
+   
+}
+
+.progress-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: green;
+    transition: width 0.3s ease;
+}
+
+.progress-text {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.flex1{
+    display: flex;
+}
+.left{
+    flex:1;
+}
+.right{
+    flex:1;
+    position: relative;
+   
+   
+}
+.june{
+    background-color: lightgrey;
+    position: relative;
+left: 120px;
+padding-right: 200px;
+  
+    height: 40px;
+    width: 500px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+ 
+   
+
+}
+.july{
+    background-color:white;
+       position: relative;
+    left: 150px;
+ border: 1px solid black;
+ padding-left: 300px;
+ padding-top: 5px;
+ padding-bottom: 5px;
+ padding-right: 5px;
+
+}
+.heading{
+    background-color: lightgray;
+    padding: 5px;
+}
